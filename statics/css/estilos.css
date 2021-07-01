@@ -1,0 +1,555 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Globales */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto';
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+p{
+    line-height: 1.4;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 85px 40px 65px 40px;
+    width: calc(100% - 80px);
+    background-color: white;
+}
+
+/* cargador de pagina */
+
+#loadingPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 4;
+    position: fixed;
+}
+
+#loadingPage.stop{
+    animation-name: stopLoading;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#loadingPage #logo{
+    width: 180px;
+    height: 55px;
+}
+
+#loadingPage #loading{
+    position: relative;
+    width: 51px;
+    left: 18px;
+    height: 50px;
+}
+
+/* Todo del headere y menu */
+
+.opacidad{
+    animation: opacidad 400ms linear;
+}
+
+header{
+    padding: 20px;
+    width: calc(100% - 40px); 
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    transition: all 300ms;
+}
+
+header #ContenedorMarca{
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+header #ContenedorMarca #nombre-green{
+    color: #00ee5d;
+}
+
+header #ContenedorMarca img{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+header nav ul, header nav ul li, header nav ul li a{
+    height: 100%;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 65px;
+    margin: 0px 10px;
+    color: white;
+    font-weight: 300;
+    transition: all 300ms;
+}
+
+header nav ul li a.activo{
+    color: #00ee5d !important;
+}
+
+header nav ul li a:hover, header nav ul li a:active{
+    color: #00ee5d !important;
+}
+
+/* Boton hamburguesa */
+header #btnMenu{
+    background-color: transparent;
+    border: 2px solid #00ee5d;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+header #btnMenu span{
+    border-radius: 5px;
+    background-color: #00ee5d;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /* matiene las propiedades del ultimo frame*/
+}
+
+header #btnMenu.open .top-line{
+    animation-name: top-line-close;
+}
+
+header #btnMenu.open .middle-line{
+    animation-name: middle-line-close;
+}
+
+header #btnMenu.open .bottom-line{
+    animation-name: bottom-line-close;
+}
+
+header #btnMenu .top-line{
+    animation-name: top-line-open;
+}
+
+header #btnMenu .middle-line{
+    animation-name: middle-line-open;
+}
+
+header #btnMenu .bottom-line{
+    animation-name: bottom-line-open;
+}
+
+/* Seccion presentacion */
+
+
+#presentacion{
+    font-family: 'Fira';
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    content: "/f107";
+}
+
+#imagenPrincipal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-image: url('../files/kiwis.webp');
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#presentacion h1{
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    letter-spacing: 2px;
+}
+
+#presentacion h2{
+    font-size: 45px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    font-weight: 700;
+}
+
+#presentacion p{
+    font-family: 'Roboto';
+    font-weight: 200;
+}
+
+#presentacion a{
+    color: #00ee5d;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #00ee5d;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: all 300ms;
+}
+
+#presentacion a:hover{
+    background-color: #00ee5d;
+    color: white;
+}
+
+#flechaSection {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: -60px;
+    margin-bottom: -60px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+
+#flechaSection a img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    animation: boxshadowAnimated linear infinite 2s;
+}
+
+
+/* Seccion caracteristicas */
+
+#caracteristicas{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    align-items: baseline;
+    text-align: center;
+    color: #67696c;
+}
+
+#caracteristicas .tarjeta{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.2s;
+}
+
+#caracteristicas .tarjeta h3{
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+
+#caracteristicas .tarjeta p{
+    font-weight: 200;
+    font-size: 16px;
+}
+
+/* seccion servicios */
+
+#servicios{
+    background-color: #F3F4F8;
+}
+
+
+/* Estilos generales para las secciones */
+.descripcionGeneral{
+    text-align: center;
+    color: #67696c;
+}
+
+.descripcionGeneral h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s;
+}
+
+.descripcionGeneral p{
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s;
+}
+
+.descripcionGeneral hr{
+    margin: 20px auto 40px auto;
+    border: 0;
+    border-top: 0px;
+    height: 3px;
+    width: 40px;
+    background-color: #00ee5d;
+    opacity: 0.7;
+    animation: fadeInUp 1.2s;
+}
+
+#servicios #contenedorServicios{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    align-items: baseline;
+}
+
+#servicios #contenedorServicios .servicio{
+    animation: fadeInUp 1.2s;
+}
+
+#servicios #contenedorServicios .servicio h3{
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 25px;
+    margin: 20px 0px 10px 0px;
+}
+
+#servicios #contenedorServicios .servicio h3 span{
+    opacity: 0.7;
+    font-size: 75px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    font-weight: 900;
+    padding-right: 6px;
+    color: #00ee5d;
+}
+
+#servicios #contenedorServicios .servicio p{
+    font-size: 16px;
+    margin: 10px 0px;
+}
+
+/* portafolio */
+
+#portafolio #trabajos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    align-items: baseline;
+}
+
+#portafolio #trabajos .trabajo{
+    overflow: hidden;
+    max-height: 220px;
+    animation: fadeInUp 1.2s;
+}
+
+#portafolio #trabajos .trabajo img{
+    height: 220px;
+    width: 100%;
+    transition: all 500ms;
+}
+
+#portafolio #trabajos .trabajo .capa{
+    color: white;
+    position: relative;
+    top: -224px;
+    height: calc(220px - 30px);
+    margin-bottom: -220px;
+    padding: 15px;
+    width: calc(100% - 30px);
+    background: rgba(0, 238, 93, 0.3);
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#portafolio #trabajos .trabajo .capa h3{
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    top: -40px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#portafolio #trabajos .trabajo .capa p{
+    font-size: 14px;
+    font-weight: 200;
+    position: relative;
+    top: 40px;
+    margin-bottom: 0px;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#portafolio #trabajos .trabajo:hover .capa{
+    opacity: 1;
+}
+
+#portafolio #trabajos .trabajo:hover img{
+    transform: scale(1.3);
+}
+
+#portafolio #trabajos .trabajo:hover .capa h3{
+    top: 0px;
+    opacity: 1;
+}
+
+#portafolio #trabajos .trabajo:hover .capa p{
+    top: 0px;
+    opacity: 1;
+}
+
+/* testimonios */
+#testimonios{
+    background-color: #495469;
+}
+
+#testimonios #puntos{
+    position: relative;
+    top: 45px;
+}
+
+#testimonios #testimoniosGlider .testimonio{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+#testimonios #testimoniosGlider .testimonio > div{
+    height: 100%;
+}
+
+#testimonios #testimoniosGlider .testimonio .comillas{
+    height: 30px;
+    width: 30px;
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(100% - 160px);
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario .cliente{
+    border-radius: 50%;
+    border: 5px solid rgba(0, 238, 93, 1);
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario p{
+    text-align: center;
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario .cliente, #testimonios #testimoniosGlider .testimonio .infoComentario .comentario{
+    margin-bottom: 20px;
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario .comentario{
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#testimonios #testimoniosGlider .testimonio .infoComentario .nombre{
+    font-weight: 400;
+}
+
+/* blog */
+
+/* contacto */
+
+#contacto{
+    color: white;
+    background-color: #495469;
+}
+
+#contacto hr{
+    background-color: white;
+}
+
+#contacto #contactos{
+    width: 250px;
+    margin: 0px auto;
+    cursor: pointer;
+    font-size: 26px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+#contacto #contactos span{
+    transition: all 300ms
+}
+
+#contacto #contactos .icon-mail2:hover{
+    color: #E34133;
+}
+
+#contacto #contactos .icon-facebook:hover{
+    color: #0676E4;
+}
+
+#contacto #contactos .icon-instagram:hover{
+    color: #E41390;
+}
+
+#contacto #contactos .icon-whatsapp:hover{
+    color: #02EB53;
+}
+
+
+
+/* footer */
+
+footer{
+    font-size: 16px;
+    color: #67696c;
+    text-align: center;
+    padding: 20px;
+    width: calc(100% - 40px);
+    background-color: white;
+}
+
+footer a{
+    color: #00ee5d;
+}
+

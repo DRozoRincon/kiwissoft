@@ -1,0 +1,224 @@
+/* Responsive width */
+@media (min-width: 1400px) {
+    #presentacion p{
+        width: 65%;
+    }
+
+    .descripcionGeneral p{
+        width: 70%;
+        margin: 0px auto;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    header nav{
+        display: block !important;
+        color: white !important;
+        background-color: transparent !important;
+    }
+}
+
+@media (max-width: 999px) {
+    header #btnMenu{
+        display: block;
+    }
+
+    header nav{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 65px;
+        left: 0px;
+        background-color: white;
+        box-shadow: 0px 1px 2px #ccc;
+    }
+
+    header nav ul{
+        height: auto;
+    }
+
+    header nav ul li{
+        height: 40px;
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a{
+        line-height: 42px;
+        color: #818181 !important;
+    }
+
+    #portafolio #trabajos{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #servicios #contenedorServicios{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+
+    #caracteristicas {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 820px) {
+    #portafolio #trabajos{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    #presentacion h2 {
+        font-size: 40px;
+    }
+
+    .descripcionGeneral h2 {
+        font-size: 32px;
+    }
+
+    .descripcionGeneral p {
+        font-size: 18px;
+    }
+
+    #presentacion a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    section {
+        padding: 85px 20px 65px 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 540px) {
+    #portafolio #trabajos{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #testimonios #testimoniosGlider .testimonio .infoComentario .comentario {
+        font-size: 16px;
+    }
+
+    #caracteristicas {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #servicios #contenedorServicios {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    #presentacion h2 {
+        font-size: 36px;
+    }
+
+    .descripcionGeneral h2 {
+        font-size: 30px;
+    }
+
+    .descripcionGeneral p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 440px) {
+    #presentacion h2 {
+        display: none;
+    }
+
+    #presentacion h1 {
+        font-size: 32px;
+    }
+ 
+}
+
+@media (max-width: 390px) {
+    section {
+        padding: 85px 10px 65px 10px;
+        width: calc(100% - 20px);
+    }
+
+    header{
+        padding: 0px 10px !important;
+        width: calc(100% - 20px) !important;
+    }
+}
+
+
+
+@media (max-width: 440px) {
+    #presentacion h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-height: 550px) and (orientation: landscape) {
+    #presentacion h2 {
+        display: none;
+    }
+
+    #presentacion h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media(max-height: 440px) and (max-width: 498px){
+    #presentacion a{
+        display: none;
+    }
+}
+
+
+@media(max-height: 392px) and (max-width: 726px){
+    #presentacion a{
+        display: none;
+    }
+}
+
+@media(max-height: 392px) and (max-width: 726px){
+    #presentacion h1 {
+        font-size: 14px;
+    }
+
+    #presentacion p {
+        font-size: 14px;
+    }
+}
+
+
+/* Responsive para imagen principal */
+@media(min-width: 1400px) and (orientation: landscape){
+    #imagenPrincipal{
+        background-image: url('../files/kiwisMasGrande.webp');
+    }
+}
+
+@media(min-width: 2500px) and (orientation: landscape){
+    #imagenPrincipal{
+        background-image: url('../files/kiwisMuyGrande.webp');
+    }
+}
+
+
+@media(min-height: 787px) and (orientation: portrait){
+    #imagenPrincipal{
+        background-image: url('../files/kiwisMasGrandeRotada.webp');
+    }
+}
+
+@media(min-height: 1181px) and (orientation: portrait){
+    #imagenPrincipal{
+        background-image: url('../files/kiwisMasGrandeRotada.webp');
+    }
+}
+
