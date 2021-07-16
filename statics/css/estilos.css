@@ -458,6 +458,13 @@ header #btnMenu .bottom-line{
     height: 100%;
 }
 
+#testimonios #testimoniosGlider .testimonio .contenedorcomillas{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+
 #testimonios #testimoniosGlider .testimonio .comillas{
     height: 30px;
     width: 30px;
@@ -517,6 +524,7 @@ header #btnMenu .bottom-line{
 }
 
 #contacto #contactos span{
+    color: white;
     transition: all 300ms
 }
 

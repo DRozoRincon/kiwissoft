@@ -36,6 +36,7 @@
         <script type="text/javascript" src="./statics/js/menu.js"></script>
         <script type="text/javascript" src="./statics/js/fecha_footer.js"></script> <!-- script para el año en la etiqueta span del footer -->
         <script type="text/javascript" src="./statics/js/glider_slider.js"></script> <!-- para configurar glider slider -->
+        <script type="text/javascript" src="./statics/js/facebook_messegner.js"></script> <!-- chat facebook messenger -->
     </head>
     <body>
         <div id="loadingPage">
@@ -187,7 +188,7 @@
         <section id="testimonios" >
             <div id="testimoniosGlider" class="wow animate__animated animate__fadeIn">
                 <div class="testimonio">
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_izq.svg"/>
                     </div>
                     <div class="infoComentario">
@@ -195,12 +196,12 @@
                         <p class="comentario">So here is us, on the raggedy edge. Don't push me, and I won't push you. </p>
                         <p class="nombre">Marry Smith, Client</p>
                     </div>
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_der.svg"/>
                     </div>
                 </div>
                 <div class="testimonio">
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_izq.svg"/>
                     </div>
                     <div class="infoComentario">
@@ -208,12 +209,12 @@
                         <p class="comentario">So here is us, on the raggedy edge. Don't push me, and I won't push you. </p>
                         <p class="nombre">Marry Smith, Client</p>
                     </div>
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_der.svg"/>
                     </div>
                 </div>
                 <div class="testimonio">
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_izq.svg"/>
                     </div>
                     <div class="infoComentario">
@@ -221,7 +222,7 @@
                         <p class="comentario">So here is us, on the raggedy edge. Don't push me, and I</p>
                         <p class="nombre">Marry Smith, Client</p>
                     </div>
-                    <div>
+                    <div class="contenedorcomillas">
                         <img class="comillas" src="./statics/files/comillas_der.svg"/>
                     </div>
                 </div>
@@ -243,10 +244,10 @@
             <p class="wow">Estamos a disposición las 24 horas, asi que sientete libre para establecer contacto con nosotros en cualquier momento y puedas contarnos tus ideas o dudas.</p>
             <hr class="wow"/>
             <div id="contactos">
-                <span class="icon-mail2 wow animate__animated animate__fadeInDown"></span>
-                <span class="icon-facebook wow animate__animated animate__fadeInUp"></span>
-                <span class="icon-instagram wow animate__animated animate__fadeInDown"></span>
-                <span class="icon-whatsapp wow animate__animated animate__fadeInUp"></span>
+                <a  target="_blank"><span class="icon-mail2 wow animate__animated animate__fadeInDown"></span></a>
+                <a href="https://www.facebook.com/kiwissoft" target="_blank"><span class="icon-facebook wow animate__animated animate__fadeInUp"></span></a>
+                <a href="https://www.instagram.com/kiwissoft/?hl=es-la" target="_blank"><span class="icon-instagram wow animate__animated animate__fadeInDown"></span></a>
+                <a target="_blank"><span class="icon-whatsapp wow animate__animated animate__fadeInUp"></span></a>
             </div>
         </section>
         <footer>
@@ -260,5 +261,13 @@
         <script>
                 new WOW().init();
         </script>
+
+        <!-- Messenger plugin de chat Code -->
+        <div id="fb-root"></div>
+
+        <!-- Your plugin de chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+        
     </body>
 </html>
