@@ -49,10 +49,29 @@ section{
     animation-fill-mode: forwards;
 }
 
-#loadingPage #logo{
+#loadingPage .ContenedorMarca{
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #828282;
+}
+
+#loadingPage .ContenedorMarca .nombre-green{
+    color: #00ee5d;
+}
+
+#loadingPage .ContenedorMarca img{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+/* #loadingPage #logo{
     width: 180px;
     height: 55px;
-}
+} */
 
 #loadingPage #loading{
     position: relative;
