@@ -580,3 +580,15 @@ footer a{
     color: #00ee5d;
 }
 
+#google_translate_element{
+    position: fixed;
+    top: 50%;
+}
+
+/* .goog-te-gadget-icon{
+    display: none;
+} */
+
+.goog-te-gadget-simple{
+    padding: 10px;
+}
